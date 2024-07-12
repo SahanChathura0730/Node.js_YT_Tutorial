@@ -1,6 +1,6 @@
 import { log } from "node:console"
 import {createServer} from "node:http"
-import { pageSelect } from "./pageSelect.js";
+import { pageSelect } from "./pageSelect";
 
 createServer ((req,res) =>{
 /*   
