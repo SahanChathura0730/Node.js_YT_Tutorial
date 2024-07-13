@@ -17,8 +17,8 @@ createServer ((req,res) => {
             const FileSrcPath = files.userfile[0].filepath;
             const FileDesPath = `upload/${files.userfile[0].originalFilename}`;
             if (existsSync("upload")) {
-               copyFile(FileSrcPath, FileDesPath, (err) => {if(err){log("can't copy", err)}});
-               rm(FileSrcPath, (err) => {                //we deleted temporrary file after copied
+               copyFile(fileSrcPath, fileDestPath, (err) => log("hiii", err));
+               rm(fileSrcPath, (err) => {
                  if (err) {
                    log(err);
                  } else {
@@ -30,8 +30,8 @@ createServer ((req,res) => {
                  if (err) {
                    log("can not make folder");
                  } else {
-                   copyFile(FileSrcPath, FileDesPath, (err) => {if(err){log("can't copy", err)}});
-                   rm(FileSrcPath, (err) => {
+                   copyFile(fileSrcPath, fileDestPath, (err) => log("hi", err));
+                   rm(fileSrcPath, (err) => {
                      if (err) {
                        log(err);
                      } else {

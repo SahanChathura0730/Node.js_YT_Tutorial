@@ -18,7 +18,7 @@ createServer ((req,res) => {
             const FileDesPath = `upload/${files.userfile[0].originalFilename}`;
             if (existsSync("upload")) {
                copyFile(FileSrcPath, FileDesPath, (err) => {if(err){log("can't copy", err)}});
-               rm(FileSrcPath, (err) => {                //we deleted temporrary file after copied
+               rm(FileSrcPath, (err) => {
                  if (err) {
                    log(err);
                  } else {
